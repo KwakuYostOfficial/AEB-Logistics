@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../app/SCSS/_header.scss"],"names":[],"mappings":"AAAA,QACI,cAAA,CACA,4BAAA","file":"global.min.css"}
+{"version":3,"sources":["../../app/SCSS/_header.scss","../../app/SCSS/_variables.scss"],"names":[],"mappings":"AAAA,QACI,4BAAA,CAEA,WCKI,CDJJ,WCGI","file":"global.min.css"}
