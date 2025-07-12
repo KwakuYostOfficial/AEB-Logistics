@@ -4,14 +4,14 @@
 
 @import './header';
 @import './hero';
+@import './info';
+@import './footer';
 
 
 body {
     width: $width;
     overflow-x:hidden ;
     font-family: $font-family;
-
-    padding-bottom: 500px;
 }
 
 .button-cta {

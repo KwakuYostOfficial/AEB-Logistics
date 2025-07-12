@@ -34,6 +34,54 @@
         }
     }
 
+    &__nav {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        height: 100%;
+
+        &-links{
+            font-size: map-get($font-size, small );
+            font-weight: map-get($font-weight, normal );
+            color: $DarkBlue;
+        }
+
+        & ul {
+            width: 100%;
+            height: 85%;
+            padding: 0 0.3125rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+
+            transition: transform .25s ease-in-out;
+
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -0.25rem;
+
+                width: inherit;
+                height: 0.3125rem;
+                background-image: linear-gradient(to right, $darkRed, $cramPink);
+                border-radius: 0.4375rem;
+                opacity: 0;
+                
+                transition: opacity .25s ease-in-out;
+            }
+
+            &:hover::before, &:hover {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+        }
+    }
+
     &__menu {
         position: relative;
 
