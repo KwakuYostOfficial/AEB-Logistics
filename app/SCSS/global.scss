@@ -1,4 +1,10 @@
+@import './reset';
 @import './variables';
 @import './mixin';
 
 @import './header';
+
+
+body {
+    width: $width;
+}

@@ -12,3 +12,15 @@ $breakpoints-down : (
     'large' : 61.9375em,
     'x-large': 87.4375em,
 );
+
+@mixin breakpoint-down ($key) {
+    @media screen and (max-width: map-get($breakpoints-down, $key)) {
+        @content;
+    };
+};
+
+@mixin breakpoint-up ($key) {
+    @media screen and (min-width: map-get($breakpoints-up, $key)) {
+        @content;
+    };
+}
