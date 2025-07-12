@@ -4,9 +4,11 @@
     width: 100%;
     height: $heigh;
 
+    z-index: 2;
+
     box-shadow:  0 1px 5px $DarkBlue;
 
-    background-color: $Very-Light-Gray;
+    background-color: $themeColor;
 
     display: flex;
     flex-flow: row nowrap;

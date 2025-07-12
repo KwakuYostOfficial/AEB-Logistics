@@ -8,6 +8,10 @@
 
 body {
     width: $width;
+    overflow-x:hidden ;
+    font-family: $font-family;
+
+    padding-bottom: 500px;
 }
 
 .button-cta {
@@ -50,4 +54,8 @@ body {
     &:hover::before {
         opacity: .25;
     }
+}
+
+.links {
+    text-decoration: none;
 }
