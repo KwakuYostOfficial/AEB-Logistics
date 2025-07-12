@@ -3,8 +3,51 @@
 @import './mixin';
 
 @import './header';
+@import './hero';
 
 
 body {
     width: $width;
+}
+
+.button-cta {
+    padding: 0.625rem 2rem;
+
+    border-radius: 45px;
+
+    position: relative;
+
+    background-color: $darkRed;
+    color: $White;
+    
+    text-decoration: none;
+    text-align: center;
+
+    font-weight: map-get($font-weight, bold);
+    font-size: map-get($font-size, normal );
+
+    box-shadow: 1px 1px 5px $DarkBlue;
+
+    &::before {
+        content: '';
+        width: inherit;
+        height: inherit;
+
+        border-radius: inherit;
+
+        background-color: $White;
+        opacity: 0;
+
+        transition: all .25s ease-in-out;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &:hover::before {
+        opacity: .25;
+    }
 }

@@ -1,13 +1,22 @@
+@import './variables';
+
 .header {
     width: 100%;
     height: $heigh;
 
-    background-color: $darkRed;
+    box-shadow:  0 1px 5px $DarkBlue;
+
+    background-color: $Very-Light-Gray;
 
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
 
     padding: 0 1.25rem;
 
@@ -39,7 +48,7 @@
                 width: 2.2rem;
                 height: 5px;
 
-                background-color: $White;
+                background-color: $DarkBlue;
                 border-radius: 5px;
 
             }

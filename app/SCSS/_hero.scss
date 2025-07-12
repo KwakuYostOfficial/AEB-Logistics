@@ -1,0 +1,11 @@
+@import './variables';
+
+.main__hero {
+    width: 100%;
+    height: 450px;
+
+    background-image: url('../../Images/barrett-ward-5WQJ_ejZ7y8-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

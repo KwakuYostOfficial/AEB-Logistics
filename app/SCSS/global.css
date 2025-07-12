@@ -2,6 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 48em) {
+  .hide-from-desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 47.9375em) {
+  .hide-from-mobile {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 48em) {
@@ -19,11 +32,16 @@
 .header {
   width: 100%;
   height: 4rem;
-  background-color: rgb(166, 36, 12);
+  box-shadow: 0 1px 5px rgb(31, 40, 42);
+  background-color: hsl(0, 0%, 98%);
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 0 1.25rem;
 }
 .header__logo {
@@ -45,7 +63,7 @@
   position: absolute;
   width: 2.2rem;
   height: 5px;
-  background-color: hsl(0, 0%, 100%);
+  background-color: rgb(31, 40, 42);
   border-radius: 5px;
 }
 .header__menu .menu span, .header__menu .menu::before, .header__menu .menu::after {
@@ -62,6 +80,57 @@
   transform: translateY(8px);
 }
 
+@media screen and (min-width: 48em) {
+  .hide-from-desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 47.9375em) {
+  .hide-from-mobile {
+    display: none;
+  }
+}
+
+.main__hero {
+  width: 100%;
+  height: 450px;
+  background-image: url("../../Images/barrett-ward-5WQJ_ejZ7y8-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 body {
   width: 100vw;
+}
+
+.button-cta {
+  padding: 0.625rem 2rem;
+  border-radius: 45px;
+  position: relative;
+  background-color: rgb(166, 36, 12);
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.125rem;
+  box-shadow: 1px 1px 5px rgb(31, 40, 42);
+}
+.button-cta::before {
+  content: "";
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background-color: hsl(0, 0%, 100%);
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.button-cta:hover::before {
+  opacity: 0.25;
 }/*# sourceMappingURL=global.css.map */
