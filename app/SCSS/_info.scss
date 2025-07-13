@@ -19,8 +19,9 @@
         }
 
         & h1, .services h2 {
+            justify-self: center;
+            align-self: center;
             height: 100%;
-            padding-left: 0.9375rem;
             padding-top: 0.125rem;
 
             font-weight: map-get($font-weight, normal );
