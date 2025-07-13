@@ -163,8 +163,8 @@
   right: 0;
   width: inherit;
   height: inherit;
-  background-color: rgb(31, 40, 42);
-  opacity: 0.25;
+  background-color: rgba(31, 40, 42, 0.705);
+  opacity: 0.15;
   transition: opacity 0.25s ease-in-out;
 }
 .main__hero-container {
@@ -309,6 +309,7 @@
   display: grid;
   background-color: hsl(0, 0%, 100%);
   box-shadow: 1px 1px 5px rgba(31, 40, 42, 0.705);
+  transition: transform 0.25s ease-in-out;
 }
 .main__info-services .services h2 {
   font-size: 1.375rem;
@@ -319,11 +320,31 @@
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  position: relative;
+}
+.main__info-services .services-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: inherit;
+  height: inherit;
+  background-color: rgba(31, 40, 42, 0.705);
+  opacity: 0.15;
+  transition: opacity 0.25s ease-in-out;
 }
 .main__info-services .services-text {
   padding: 0.625rem 0.4375rem;
   color: hsl(233, 8%, 62%);
   font-size: 0.9rem;
+}
+.main__info-services .services:hover, .main__info-services .services:active {
+  transform: scale(1.03);
+}
+.main__info-services .services:hover .services-img::before, .main__info-services .services:active .services-img::before {
+  opacity: 0.6;
 }
 .main__info-services .local-services-img {
   background-image: url("../../Images/close-up-delivery-person-giving-parcel-client.jpg");

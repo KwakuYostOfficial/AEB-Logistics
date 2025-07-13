@@ -36,6 +36,8 @@
             background-color: $White;
             box-shadow: 1px 1px 5px $shadowEffect;
 
+            transition: transform .25s ease-in-out;
+
             &-img {
                 width: 100%;
                 height: 100%;
@@ -43,12 +45,39 @@
                 background-repeat: no-repeat;
                 background-position: top center;
                 background-size: cover;
+
+                position: relative;
+
+                &::before {
+                    content: '';
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    
+                    width: inherit;
+                    height: inherit;
+
+                    background-color: $shadowEffect ;
+                    opacity: 0.15;
+
+                    transition: opacity .25s ease-in-out;
+                }
             }
 
             &-text {
                 padding: 0.625rem 0.4375rem;
                 color: $themeTextColor2;
                 font-size: map-get($font-size, small );
+            }
+
+            &:hover, &:active{
+                .services-img::before{
+                    opacity: 0.6;
+                }
+                transform: scale(1.03);
             }
         }
 
