@@ -3,6 +3,7 @@
 $offWhite: rgb(216 204 177);
 $darkRed: rgb(166 36 12);
 $DarkBlue: rgb(31 40 42);
+$shadowEffect: rgba(31, 40, 42, 0.705);
 
 $shadesOfWhite: rgb(150 140 140);
 $cramPink: rgb(226 135 105);
@@ -28,6 +29,7 @@ $font-size: (
     'x-small' : 0.625rem,
     'small' : 0.9rem,
     'normal' : 1.125rem,
+    'x-normal' :1.375rem,
     'large' : 2.5rem,
 );
 $font-family: sans-serif;

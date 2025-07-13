@@ -1,6 +1,101 @@
 @import './variables';
 
 .main__info {
-    height: 500px;
-    background-color: yellow;
+    height: 1000px;
+
+    background-color: $Light-Grayish-Blue;
+
+    &-services{
+        display: grid;
+        height: auto;
+        gap: 0.9375rem;
+
+        padding-bottom: 20px;
+
+        & h1 {
+            font-size: map-get($font-size, large );
+            font-weight: map-get($font-weight, normal );
+            color: $themeTextColor;
+        }
+
+        & h1, .services h2 {
+            padding-left: 0.9375rem;
+            padding-top: 0.125rem;
+        }
+
+        .services{
+            & h2 {
+                font-size: map-get($font-size, x-normal );
+                font-weight: map-get($font-weight, normal );
+                color: $themeTextColor;
+            }
+
+            &-img {
+                background-repeat: no-repeat;
+                background-position: top center;
+                background-size: cover;
+            }
+
+            &-text {
+                padding: 0.625rem 0.4375rem;
+                color: $themeTextColor2;
+                font-size: map-get($font-size, small );
+            }
+        }
+
+        .local-services {
+            &-img {
+                background-image: url('../../Images/close-up-delivery-person-giving-parcel-client.jpg');
+            }
+        }
+
+        .global-services {
+            &-img {
+                background-image: url('../../Images/AdobeStock_1428802485_Preview.jpeg');
+            }
+        }
+
+        
+    }
+}
+
+/* || FOR MOBILE */
+@include breakpoint-down (medium) {
+    .main__info {
+        padding-top: 15.625rem;
+
+        &-services{
+            margin: 0 auto;
+
+            width: 85%;
+
+            grid-template-rows: 3.125rem 1fr 1fr;
+
+            & h1 {
+                height: 100%;
+            }
+
+            .services {
+                height: 100%;
+                display: grid;
+                grid-template-rows: 3.125rem 9.375rem 8.125rem;
+
+                background-color: $White;
+                box-shadow: 1px 1px 5px $shadowEffect;
+
+                & h2 {
+                    height: 100%;
+                }
+
+                &-img {
+                    height: 100%;
+                    width: 100%;
+                }
+
+                &-text {
+                    height: 100%;
+                }
+            }
+        }
+    }
 }

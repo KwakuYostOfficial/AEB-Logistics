@@ -59,8 +59,7 @@
 
             background-color: $themeColor;
 
-            border-radius: 0.625rem;
-            box-shadow: 1px 1px 5px $DarkBlue;
+            box-shadow: 1px 1px 5px $shadowEffect;
             
             transition: transform .25s ease-in-out;
 
@@ -140,7 +139,12 @@
 /* || FOR TABLET */
 @include breakpoint-up (medium) {
     .main__hero {
-         &-container {
+
+        &:hover::before {
+            opacity: .65;
+        }
+
+        &-container {
             width: 97%;
             height: 13rem;
 
@@ -149,7 +153,7 @@
             .container__item{
                 width: 100%;
             }
-         }
+        }
     }
 };
 
@@ -157,8 +161,15 @@
 @include breakpoint-up (x-large) {
     .main__hero{
 
-        &:hover::before {
-            opacity: .65;
+        &-container {
+            width: 70%;
+            height: 13rem;
+
+            grid-auto-rows: 12.5rem;
+
+            .container__item{
+                width: 100%;
+            }
         }
     }
 };
