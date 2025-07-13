@@ -1,7 +1,9 @@
 @import './variables';
 
 .main__info {
-    height: 1000px;
+    height: auto;
+
+    padding-bottom: 100px;
 
     background-color: $Light-Grayish-Blue;
 
@@ -14,23 +16,30 @@
 
         & h1 {
             font-size: map-get($font-size, large );
+        }
+
+        & h1, .services h2 {
+            height: 100%;
+            padding-left: 0.9375rem;
+            padding-top: 0.125rem;
+
             font-weight: map-get($font-weight, normal );
             color: $themeTextColor;
         }
 
-        & h1, .services h2 {
-            padding-left: 0.9375rem;
-            padding-top: 0.125rem;
-        }
-
         .services{
+            display: grid;
             & h2 {
                 font-size: map-get($font-size, x-normal );
-                font-weight: map-get($font-weight, normal );
-                color: $themeTextColor;
             }
 
+            background-color: $White;
+            box-shadow: 1px 1px 5px $shadowEffect;
+
             &-img {
+                width: 100%;
+                height: 100%;
+
                 background-repeat: no-repeat;
                 background-position: top center;
                 background-size: cover;
@@ -71,30 +80,46 @@
 
             grid-template-rows: 3.125rem 1fr 1fr;
 
-            & h1 {
-                height: 100%;
-            }
-
             .services {
                 height: 100%;
-                display: grid;
                 grid-template-rows: 3.125rem 9.375rem 8.125rem;
-
-                background-color: $White;
-                box-shadow: 1px 1px 5px $shadowEffect;
-
-                & h2 {
-                    height: 100%;
-                }
-
-                &-img {
-                    height: 100%;
-                    width: 100%;
-                }
 
                 &-text {
                     height: 100%;
                 }
+            }
+        }
+    }
+}
+
+/* || FOR TABLETS */
+@include breakpoint-up (medium) {
+    .main__info{
+        padding-top: 6.25rem;
+
+        &-services {
+            grid-template-rows: 4.375rem 1fr 1fr;
+
+            width: 97%;
+
+            margin: 0 auto;
+
+            .services {
+                grid-template-rows: 4.375rem 18.75rem 6.25rem;
+            }
+        }
+    }
+}
+
+/* || FOR DESKTOP */
+@include breakpoint-up (large) {
+    .main__info {
+        &-services {
+            grid-template-rows: 4.375rem 1fr;
+            grid-template-columns: 1fr 1fr;
+
+            & h1 {
+                grid-column: 1/3;
             }
         }
     }

@@ -285,7 +285,8 @@
 }
 
 .main__info {
-  height: 1000px;
+  height: auto;
+  padding-bottom: 100px;
   background-color: hsl(220, 16%, 96%);
 }
 .main__info-services {
@@ -296,19 +297,25 @@
 }
 .main__info-services h1 {
   font-size: 2.5rem;
+}
+.main__info-services h1, .main__info-services .services h2 {
+  height: 100%;
+  padding-left: 0.9375rem;
+  padding-top: 0.125rem;
   font-weight: 400;
   color: rgb(31, 40, 42);
 }
-.main__info-services h1, .main__info-services .services h2 {
-  padding-left: 0.9375rem;
-  padding-top: 0.125rem;
+.main__info-services .services {
+  display: grid;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 1px 1px 5px rgba(31, 40, 42, 0.705);
 }
 .main__info-services .services h2 {
   font-size: 1.375rem;
-  font-weight: 400;
-  color: rgb(31, 40, 42);
 }
 .main__info-services .services-img {
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -335,25 +342,36 @@
     width: 85%;
     grid-template-rows: 3.125rem 1fr 1fr;
   }
-  .main__info-services h1 {
-    height: 100%;
-  }
   .main__info-services .services {
     height: 100%;
-    display: grid;
     grid-template-rows: 3.125rem 9.375rem 8.125rem;
-    background-color: hsl(0, 0%, 100%);
-    box-shadow: 1px 1px 5px rgba(31, 40, 42, 0.705);
-  }
-  .main__info-services .services h2 {
-    height: 100%;
-  }
-  .main__info-services .services-img {
-    height: 100%;
-    width: 100%;
   }
   .main__info-services .services-text {
     height: 100%;
+  }
+}
+/* || FOR TABLETS */
+@media screen and (min-width: 48em) {
+  .main__info {
+    padding-top: 6.25rem;
+  }
+  .main__info-services {
+    grid-template-rows: 4.375rem 1fr 1fr;
+    width: 97%;
+    margin: 0 auto;
+  }
+  .main__info-services .services {
+    grid-template-rows: 4.375rem 18.75rem 6.25rem;
+  }
+}
+/* || FOR DESKTOP */
+@media screen and (min-width: 62em) {
+  .main__info-services {
+    grid-template-rows: 4.375rem 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .main__info-services h1 {
+    grid-column: 1/3;
   }
 }
 @media screen and (min-width: 48em) {
