@@ -518,6 +518,11 @@
   width: 2.5rem;
   height: 2.5rem;
 }
+.main__info-for-you .for-you-container__text .set-2 .service-text {
+  color: hsl(233, 8%, 62%);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
 .main__info-for-you .for-you-container__text .set-3 {
   height: 100%;
   display: flex;

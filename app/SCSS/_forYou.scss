@@ -127,6 +127,12 @@
                         width: 2.5rem;
                         height: 2.5rem;
                     }
+
+                    &-text{
+                        color: $themeTextColor2;
+                        font-size: map-get($font-size, small);
+                        font-weight: map-get($font-weight, normal);
+                    }
                 }
             }
 
