@@ -2,7 +2,7 @@
 
 .main__info-for-you{
     display: grid;
-    grid-template-rows: repeat(2, 500px);// Dont forget to convert the values
+    grid-template-rows: auto auto;// Dont forget to convert the values
 
     gap: 3.125rem;
 
@@ -47,8 +47,112 @@
             height: 100%;
             margin: auto auto;
 
+            display: grid;
+            grid-template-rows: 1fr 1fr 5rem;
+
             background-color: $White;
             box-shadow: $shadow;
+
+            .set-1 {
+                display: flex;
+                flex-flow: column nowrap;
+
+                height: 100%;
+                padding: 0.625rem;
+                gap: 0.625rem;
+                & h3 {
+                    font-size:  map-get($font-size, large);
+                    line-height: 1.1;
+                }
+
+                & h4{
+                    font-size: map-get($font-size, x-normal );
+                    padding-bottom: 0.9375rem;
+                    padding-top: 0.625rem;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0.625rem;
+                        width: 4.375rem;
+                        height: 0.3125rem;
+
+                        border-top-right-radius: 0.3125rem;
+                        border-bottom-right-radius: 0.3125rem;
+
+                        background-color: black;
+                    }
+                }
+
+                & h4, & h3 {
+                    font-weight: map-get($font-weight, normal);
+                }
+                & p {
+                    font-size: map-get($font-size, normal);
+                    font-weight: map-get($font-weight, normal);
+                    color: $themeTextColor2;
+                }
+            }
+
+            .set-2 {
+                display: grid;
+                height: 100%;
+
+                background-color: $Light-Grayish-Blue;
+
+                & h4 {
+                    font-size: map-get($font-size, x-normal);
+                    font-weight: map-get($font-weight, normal);
+                    color: $themeTextColor;
+
+                    padding: 0.625rem;
+                }
+            }
+
+            .set-3 {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &-button {
+                    background-color: $darkRed;
+                    color: $White;
+
+                    font-size: map-get($font-size, normal);
+                    font-weight: map-get($font-weight, normal);
+
+                    padding: 0.9375rem 1.5625rem;
+                    border-radius: 0.3125rem;
+
+                    box-shadow: $shadow;
+
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+
+                        width: inherit;
+                        height: inherit;
+
+                        background-color: $shadowEffect2;
+                        opacity: 0;
+
+                        transition: opacity 0.25s ease-in-out;
+
+                    }
+
+                    &:hover::before {
+                        opacity: 0.25;
+                    }
+                }
+            }
         }
     }
 
@@ -75,11 +179,12 @@
         width: 85%;
 
         & .for-you-container {
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-rows: 15.9375rem 1fr;
             gap: 0.625rem;
             &__text {
                 margin: 0 auto;
                 width: 95%;
+                height: auto;
 
                 background-color: $White;
                 box-shadow: $shadow;
@@ -94,12 +199,11 @@
         width: 90%;
         gap: 3rem;
         & .for-you-container {
-            grid-template-rows: 1fr;
+            grid-template-rows: 28.125rem;
             grid-template-columns: repeat(2, 1fr);
-
-            max-height: 400px;
             &__img {
                 order: 2;
+                height: 100%;
             }
 
             &__text {
@@ -107,6 +211,43 @@
 
                 width: 80%;
                 height: 90%;
+
+                .set-1 {
+                    & h3 {
+                        font-size:  map-get($font-size, x-normal);
+                        line-height: 1.1;
+                        font-weight: map-get($font-weight, bold);
+                    }
+
+                    & h4{
+                        font-size: map-get($font-size, normal );
+                        font-weight: map-get($font-weight, normal);
+                    }
+
+                    & p {
+                        font-size: map-get($font-size, small);
+                        font-weight: map-get($font-weight, normal);
+                        color: $themeTextColor2;
+                    }
+                }
+
+                .set-2 {
+
+                    & h4 {
+                        font-size: map-get($font-size, normal);
+                        font-weight: map-get($font-weight, normal);
+                    }
+                }
+
+                .set-3 {
+                    &-button {
+                        font-size: map-get($font-size, small);
+                        font-weight: map-get($font-weight, normal);
+
+                        padding: 0.625rem 1.5625rem;
+                    }
+                }
+                
             }
         }
 
@@ -134,5 +275,9 @@
     .main__info-for-you{
         width: 80%;
         gap: 3rem;
+
+        .for-you-container{
+            grid-template-rows: 25rem;
+        }
     }
 }
