@@ -1,0 +1,55 @@
+@import './variables';
+
+
+.main__index {
+    min-height: 300px;
+    max-height: auto;
+    width: 90%;
+
+    padding: 0.9375rem;
+    margin: 0 auto;
+
+    display: grid;
+    gap: 0.625rem;
+
+    background-color: $White;
+
+    &-sections {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 10px;
+        padding-bottom: 0.625rem;
+
+        & h4 {
+            font-size: map-get($font-size, x-normal);
+            font-weight: map-get($font-weight, bold);
+            color: $themeTextColor;
+            padding: 0.3125rem 0;
+        }
+
+        & a {
+            font-size: map-get($font-size, normal);
+            font-weight: map-get($font-weight, normal);
+            color: $themeTextColor2;
+            padding-left: 0.625rem;
+        }
+    }
+}
+
+
+/* || FOR MOBILE */
+@include breakpoint-down (medium) {
+    .main__index {
+        width: 100%;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 1fr;
+    }
+}
+
+/* || FOR TABLETS */
+@include breakpoint-up (medium) {
+    .main__index {
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
