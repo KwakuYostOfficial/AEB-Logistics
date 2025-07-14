@@ -59,7 +59,7 @@
 
             background-color: $themeColor;
 
-            box-shadow: 1px 1px 5px $shadowEffect;
+            box-shadow: $shadow;
             
             transition: transform .25s ease-in-out;
 

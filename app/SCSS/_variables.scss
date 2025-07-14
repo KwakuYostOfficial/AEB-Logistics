@@ -39,6 +39,8 @@ $font-weight: (
     "bold" : 700,
 );
 
+$shadow : 1px 1px 5px $shadowEffect;
+
 .hide-from-desktop {
     @include breakpoint-up (medium) {
         display: none;
