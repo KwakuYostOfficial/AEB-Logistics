@@ -215,21 +215,21 @@
 }
 
 .ship-now .container__logo {
-  background-image: url("../../Images/Icons/ship-svgrepo-com.svg");
-  background-size: contain;
+  background-image: url("../../Images/Icons/classical Icon/ocean-transportation-svgrepo-com.svg");
+  background-size: 95%;
   background-position: center center;
 }
 
 .get-a-quote .container__logo {
-  background-image: url("../../Images/Icons/clipboard-svgrepo-com.svg");
-  background-size: contain;
+  background-image: url("../../Images/Icons/classical Icon/clipboard-verification-symbol-svgrepo-com.svg");
+  background-size: 95%;
   background-position: center center;
 }
 
 .aeb-for-business .container__logo {
-  background-image: url("../../Images/Icons/shipping-svgrepo-com.svg");
-  background-size: contain;
-  background-position: center center;
+  background-image: url("../../Images/Icons/classical Icon/delivered-box-verification-symbol-svgrepo-com.svg");
+  background-size: 95%;
+  background-position: left center;
 }
 
 /* || FOR MOBILE */
