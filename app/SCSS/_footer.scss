@@ -1,12 +1,126 @@
 @import './variables';
 
-.footer{
-    height: 200px;
+footer{
+    .footer{
+        min-height: 200px;
+        max-height: auto;
 
-    background: wheat;
+        background: $Light-Grayish-Blue;
 
-    position: static;
-    bottom: 0;
-    left: 0;
-    right: 0;
+        position: static;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        display: grid;
+
+        &__sections {
+            width: 100%;
+        }
+
+        
+
+        &__section-1 {
+            height: fit-content;
+            &-img {
+                width: 300px;
+                height: 70px;
+                display: block;
+            
+                background-image: url('../../Images/logo black.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: -1.375rem center;
+            }
+        }
+
+        &__section-2 {
+            display: flex;
+            gap: 1.875rem;
+            
+            font-size: map-get($font-size, normal);
+            font-weight: map-get($font-weight, normal);
+            color: $themeTextColor;
+            
+            & a {
+                color: $themeTextColor2;
+            }
+        }
+
+        &__section-3 {
+            & h4{
+                padding-top: 0.625rem;
+                font-size: map-get($font-size, normal);
+                font-weight: map-get($font-weight, normal);
+            }
+            & a {
+                display: inline-block;
+
+                width: 2.5rem;
+                height: 2.5rem;
+
+                background-size: contain;
+                background-position: center center;
+            }
+
+            & .youtube {
+                background-image: url('../../Images/Icons/icons8-youtube.svg');
+            }
+
+            & .faceBook {
+                background-image: url('../../Images/Icons/icons8-facebook.svg');
+            }
+
+            & .Instagram {
+                background-image: url('../../Images/Icons/icons8-instagram.svg');
+            }
+            & .LinkedIn {
+                background-image: url('../../Images/Icons/icons8-linkedin.svg');
+            }
+        }
+    }
+}
+/* || FOR MOBILE */
+@include breakpoint-down (medium) {
+    .footer {
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 1fr;
+
+        padding: 0.625rem;
+
+        &__section-1{
+            height: auto;
+        }
+
+        &__section-2 {
+            flex-flow: column nowrap;
+        }
+    }
+}
+
+/* || FOR TABLETS */
+@include breakpoint-up (medium) {
+    .footer {
+        padding-left: 50px;
+        padding-right: 50px;
+
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        &__section-1{
+            height: auto;
+            grid-column: 1/2;
+        }
+
+        &__section-2 {
+            flex-flow: row wrap;
+            grid-column: 1/2;
+            grid-row:2/3;
+        }
+
+        &__section-3 {
+            grid-column: 2/3;
+            grid-row: 1/3;
+        }
+    }
 }
