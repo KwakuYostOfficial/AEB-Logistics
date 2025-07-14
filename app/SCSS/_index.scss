@@ -37,6 +37,10 @@
             &:hover {
                 transform: scale(1.015);
             }
+
+            &:active {
+                color: $darkRed;
+            }
         }
     }
 }

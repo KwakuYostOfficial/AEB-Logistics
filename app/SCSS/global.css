@@ -710,6 +710,9 @@
 .main__index-sections a:hover {
   transform: scale(1.015);
 }
+.main__index-sections a:active {
+  color: rgb(166, 36, 12);
+}
 
 /* || FOR MOBILE */
 @media screen and (max-width: 47.9375em) {
