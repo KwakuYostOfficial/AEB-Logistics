@@ -494,6 +494,8 @@
 .main__info-for-you .for-you-container__text .set-2 {
   display: grid;
   height: 100%;
+  gap: 0.3125rem;
+  padding: 0 0.625rem;
   background-color: hsl(220, 16%, 96%);
 }
 .main__info-for-you .for-you-container__text .set-2 h4 {
@@ -501,6 +503,20 @@
   font-weight: 400;
   color: rgb(31, 40, 42);
   padding: 0.625rem;
+}
+.main__info-for-you .for-you-container__text .set-2 .service {
+  height: auto;
+  padding: 0.3125rem 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 0.9375rem;
+}
+.main__info-for-you .for-you-container__text .set-2 .service-logo {
+  display: inline-block;
+  background-color: yellow;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 .main__info-for-you .for-you-container__text .set-3 {
   height: 100%;
@@ -559,6 +575,19 @@
     background-color: hsl(0, 0%, 100%);
     box-shadow: 1px 1px 5px rgba(31, 40, 42, 0.705);
   }
+  .main__info-for-you .for-you-container__text .set-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2.5rem;
+  }
+  .main__info-for-you .for-you-container__text .set-2 .service {
+    height: auto;
+    padding: 0.3125rem 0;
+    align-self: center;
+  }
+  .main__info-for-you .for-you-container__text .set-2 .service-text {
+    color: hsl(233, 8%, 62%);
+    font-weight: 400;
+  }
 }
 /* || FOR TABLETS */
 @media screen and (min-width: 48em) {
@@ -593,9 +622,14 @@
     font-weight: 400;
     color: hsl(233, 8%, 62%);
   }
+  .main__info-for-you .for-you-container__text .set-2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2.5rem;
+  }
   .main__info-for-you .for-you-container__text .set-2 h4 {
     font-size: 1.125rem;
     font-weight: 400;
+    grid-column: 1/3;
   }
   .main__info-for-you .for-you-container__text .set-3-button {
     font-size: 0.9rem;
@@ -620,7 +654,7 @@
     gap: 3rem;
   }
   .main__info-for-you .for-you-container {
-    grid-template-rows: 25rem;
+    grid-template-rows: 28.125rem;
   }
 }
 @media screen and (min-width: 48em) {
