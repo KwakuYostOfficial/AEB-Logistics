@@ -32,6 +32,11 @@
             font-weight: map-get($font-weight, normal);
             color: $themeTextColor2;
             padding-left: 0.625rem;
+            transition: transform 0.25s ease-in-out;
+
+            &:hover {
+                transform: scale(1.015);
+            }
         }
     }
 }
