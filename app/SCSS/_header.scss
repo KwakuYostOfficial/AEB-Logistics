@@ -1,4 +1,5 @@
 @import './variables';
+@import './animations';
 
 .header {
     width: 100%;
@@ -160,18 +161,36 @@
 /* || FOR MOBILE */
 
 .show-menu {
+    visibility: hidden;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: start;
 
-    position: absolute;
+    position: fixed;
     top: 5rem;
     left: 50%;
 
     width: 90%;
+    height: 250px;
 
     transform: translateX(-50%);
 
     background-color: $themeColor;
+}
+
+.fade-in {
+    animation-name: fade-in;
+    animation-duration: .25s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+}
+
+.fade-out {
+    animation-name: fade-out;
+    animation-duration: .25s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
 }
