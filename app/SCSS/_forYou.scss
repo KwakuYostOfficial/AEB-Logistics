@@ -123,7 +123,11 @@
 
                     &-logo {
                         display: inline-block;
-                        background-color: yellow;
+
+                        background-size: contain;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+
                         min-width: 2.5rem;
                         max-width: 2.5rem;
                         height: 2.5rem;
@@ -181,6 +185,64 @@
                 }
             }
         }
+
+        & .mini-shipping__text {
+            & .set-2 {
+                & .service-1 {
+                    & .service-logo  {
+                        background-image: url('../../Images/Icons/classical Icon/clipboard-verification-symbol-svgrepo-com.svg');
+                    }
+                }
+
+                & .service-2 {
+                    & .service-logo {
+                        background-image: url('../../Images/Icons/classical Icon/logistics-delivery-truck-in-movement-svgrepo-com.svg');  
+                    }
+                }
+
+                & .service-3 {
+                    & .service-logo {
+                        background-image: url('../../Images/Icons/classical Icon/package-cube-box-for-delivery-svgrepo-com.svg');
+                    }
+                }
+
+                & .service-4 {
+                    & .service-logo {
+                        background-image: url('../../Images/Icons/classical Icon/placeholder-on-map-paper-in-perspective-svgrepo-com.svg');
+                    }
+                }
+            }
+        }
+
+        & .cargo-shipping__text {
+            & .set-2 {
+                & .service-1 {
+                    & .service-logo{
+                        background-image: url('../../Images/Icons/classical Icon/air-transport-svgrepo-com.svg');
+                    } 
+                }
+
+                & .service-2 {
+                    & .service-logo {
+                        background-image: url('../../Images/Icons/classical Icon/logistics-truck-svgrepo-com.svg');
+                    }
+                }
+
+                & .service-3 {
+                    & .service-logo {
+                        background-image: url('../../Images/Icons/classical Icon/ocean-transportation-svgrepo-com.svg');
+                    }
+                }
+
+                & .service-4 {
+                    & .service-logo {
+                        background-image: url('../../Images/Icons/classical Icon/');//Get an Icon for this one
+                        background-color: yellow;
+                    }
+                }
+            }
+        }
+
     }
 
     & .mini-shipping {

@@ -619,7 +619,9 @@
 }
 .main__info-for-you .for-you-container__text .set-2 .service-logo {
   display: inline-block;
-  background-color: yellow;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
   min-width: 2.5rem;
   max-width: 2.5rem;
   height: 2.5rem;
@@ -660,6 +662,31 @@
 }
 .main__info-for-you .for-you-container__text .set-3-button:hover::before {
   opacity: 0.25;
+}
+.main__info-for-you .for-you-container .mini-shipping__text .set-2 .service-1 .service-logo {
+  background-image: url("../../Images/Icons/classical Icon/clipboard-verification-symbol-svgrepo-com.svg");
+}
+.main__info-for-you .for-you-container .mini-shipping__text .set-2 .service-2 .service-logo {
+  background-image: url("../../Images/Icons/classical Icon/logistics-delivery-truck-in-movement-svgrepo-com.svg");
+}
+.main__info-for-you .for-you-container .mini-shipping__text .set-2 .service-3 .service-logo {
+  background-image: url("../../Images/Icons/classical Icon/package-cube-box-for-delivery-svgrepo-com.svg");
+}
+.main__info-for-you .for-you-container .mini-shipping__text .set-2 .service-4 .service-logo {
+  background-image: url("../../Images/Icons/classical Icon/placeholder-on-map-paper-in-perspective-svgrepo-com.svg");
+}
+.main__info-for-you .for-you-container .cargo-shipping__text .set-2 .service-1 .service-logo {
+  background-image: url("../../Images/Icons/classical Icon/air-transport-svgrepo-com.svg");
+}
+.main__info-for-you .for-you-container .cargo-shipping__text .set-2 .service-2 .service-logo {
+  background-image: url("../../Images/Icons/classical Icon/logistics-truck-svgrepo-com.svg");
+}
+.main__info-for-you .for-you-container .cargo-shipping__text .set-2 .service-3 .service-logo {
+  background-image: url("../../Images/Icons/classical Icon/ocean-transportation-svgrepo-com.svg");
+}
+.main__info-for-you .for-you-container .cargo-shipping__text .set-2 .service-4 .service-logo {
+  background-image: url("../../Images/Icons/classical Icon/");
+  background-color: yellow;
 }
 .main__info-for-you .mini-shipping__img {
   background-image: url("../../Images/black-female-courier-unloading-cardboard-boxes-from-van-while-making-delivery-city.jpg");
