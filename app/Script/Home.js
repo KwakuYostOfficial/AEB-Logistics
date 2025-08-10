@@ -1,3 +1,5 @@
+/* || THIS IS FOR THE BUTTONS NAVIGATION BUTTON AND ETC */
+
 const menu =  document.querySelector('.header__menu');
 const mobMenu = document.querySelector('.header__navigation-menu-mob');
 
@@ -14,3 +16,6 @@ menu.addEventListener('click', () => {
     }
 });
 
+
+/* HEADER SECTION */
+const header = document.querySelector('.header-js');

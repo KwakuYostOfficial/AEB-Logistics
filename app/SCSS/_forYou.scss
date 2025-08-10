@@ -251,8 +251,8 @@
             &__text {
                 order: 1;
 
-                width: 80%;
-                height: 90%;
+                width: 95%;
+                height: 95%;
 
                 .set-1 {
                     & h3 {
@@ -304,13 +304,13 @@
 
             &__text {
                 order: 2;
-                transform: translateX(-20%);
+                transform: translateX(-13%);
             }
         }
 
         & .cargo-shipping {
             &__text {
-                transform: translateX(20%);
+                transform: translateX(13%);
             }
         }
     }
