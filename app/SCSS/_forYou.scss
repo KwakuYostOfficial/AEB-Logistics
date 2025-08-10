@@ -124,7 +124,8 @@
                     &-logo {
                         display: inline-block;
                         background-color: yellow;
-                        width: 2.5rem;
+                        min-width: 2.5rem;
+                        max-width: 2.5rem;
                         height: 2.5rem;
                     }
 
@@ -251,7 +252,7 @@
             &__text {
                 order: 1;
 
-                width: 95%;
+                width: 100%;
                 height: 95%;
 
                 .set-1 {

@@ -620,7 +620,8 @@
 .main__info-for-you .for-you-container__text .set-2 .service-logo {
   display: inline-block;
   background-color: yellow;
-  width: 2.5rem;
+  min-width: 2.5rem;
+  max-width: 2.5rem;
   height: 2.5rem;
 }
 .main__info-for-you .for-you-container__text .set-2 .service-text {
@@ -715,7 +716,7 @@
   }
   .main__info-for-you .for-you-container__text {
     order: 1;
-    width: 95%;
+    width: 100%;
     height: 95%;
   }
   .main__info-for-you .for-you-container__text .set-1 h3 {
