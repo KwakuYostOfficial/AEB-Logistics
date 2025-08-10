@@ -325,6 +325,22 @@
 
         .for-you-container{
             grid-template-rows: 28.125rem;
+
+            &__text{
+                width: 85%;
+            }
+
+            & .mini-shipping {
+                &__text {
+                    transform: translateX(-20%);
+                }
+            }
+
+            & .cargo-shipping {
+                &__text {
+                    transform: translateX(20%);
+                }
+            }
         }
     }
 }

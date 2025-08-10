@@ -767,6 +767,15 @@
   .main__info-for-you .for-you-container {
     grid-template-rows: 28.125rem;
   }
+  .main__info-for-you .for-you-container__text {
+    width: 85%;
+  }
+  .main__info-for-you .for-you-container .mini-shipping__text {
+    transform: translateX(-20%);
+  }
+  .main__info-for-you .for-you-container .cargo-shipping__text {
+    transform: translateX(20%);
+  }
 }
 @media screen and (min-width: 48em) {
   .hide-from-desktop {
