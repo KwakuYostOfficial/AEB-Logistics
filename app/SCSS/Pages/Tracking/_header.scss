@@ -1,0 +1,12 @@
+@import '../../Global/variables';
+@import '../../Global/mixin';
+
+
+.header {
+    @include shadowEffectsHeader ($shadowEffect);
+    width: $width;
+    height: $heigh;
+
+    background-color: $themeColor;
+    
+}

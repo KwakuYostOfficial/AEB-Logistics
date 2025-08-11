@@ -1,0 +1,9 @@
+@import '../../Global/reset';
+@import '../../Global/variables';
+
+@import './header';
+
+body{
+    width: $width;
+    height: 100vh;
+}

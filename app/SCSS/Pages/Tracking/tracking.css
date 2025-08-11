@@ -1,1 +1,50 @@
-/*# sourceMappingURL=tracking.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@media screen and (min-width: 48em) {
+  .hide-from-desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 47.9375em) {
+  .hide-from-mobile {
+    display: none;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 48em) {
+  .hide-from-desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 47.9375em) {
+  .hide-from-mobile {
+    display: none;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.header {
+  box-shadow: 0 1px 5px rgba(31, 40, 42, 0.705);
+  width: 100vw;
+  height: 4rem;
+  background-color: hsl(0, 0%, 100%);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}/*# sourceMappingURL=tracking.css.map */

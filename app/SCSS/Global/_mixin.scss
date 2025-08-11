@@ -23,4 +23,8 @@ $breakpoints-down : (
     @media screen and (min-width: map-get($breakpoints-up, $key)) {
         @content;
     };
-}
+};
+
+@mixin shadowEffectsHeader ($effect) {
+    box-shadow: 0 1px 5px $effect;
+};

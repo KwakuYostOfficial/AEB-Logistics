@@ -2,12 +2,11 @@
 @import '../../Global/animations';
 
 .header {
+    @include shadowEffectsHeader($shadowEffect);
     width: 100%;
     height: $heigh;
 
     z-index: 2;
-
-    box-shadow:  0 1px 5px $shadowEffect;
 
     background-color: $themeColor;
 
