@@ -4,6 +4,9 @@
 
 .header {
     @include shadowEffectsHeader ($shadowEffect);
+
+    font-family: $font-family;
+
     width: $width;
     height: $heigh;
 
@@ -14,5 +17,30 @@
     left: 0;
     right: 0;
     z-index: 2;
+
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &__aeb_logo-link {
+        display: block;
+        height: 100%;
+
+        background-color: blue;
+
+        & img {
+            display: block;
+            height: 100%;
+        }
+    }
+
+    &__nav {
+        &-list {
+            list-style-type: none;
+        }
+    }
+
     
 }
