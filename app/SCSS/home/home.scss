@@ -1,6 +1,7 @@
-@import './reset';
-@import './variables';
-@import './mixin';
+@import '../Global/reset';
+@import '../Global/variables';
+@import '../Global/mixin';
+@import '../Global/animations';
 
 @import './header';
 @import './hero';
@@ -8,7 +9,7 @@
 @import './forYou';
 @import './index';
 @import './footer';
-@import './animations';
+
 
 
 body {

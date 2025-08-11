@@ -21,6 +21,60 @@
   white-space: nowrap;
 }
 
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    bottom: 100%;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+    bottom: 99%;
+  }
+  25% {
+    opacity: 0.25;
+    bottom: 75%;
+  }
+  50% {
+    opacity: 0.5;
+    bottom: 50%;
+  }
+  75% {
+    opacity: 0.75;
+    bottom: 25%;
+  }
+  to {
+    opacity: 1;
+    bottom: 0%;
+    visibility: visible;
+  }
+}
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+    bottom: 0;
+  }
+  25% {
+    bottom: 25%;
+  }
+  50% {
+    bottom: 50%;
+  }
+  75% {
+    bottom: 75%;
+  }
+  99% {
+    bottom: 99%;
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    bottom: 100%;
+    visibility: hidden;
+  }
+}
 @media screen and (min-width: 48em) {
   .hide-from-desktop {
     display: none;
@@ -984,60 +1038,6 @@ footer .footer__section-3 .LinkedIn {
     grid-row: 1/3;
   }
 }
-@keyframes fade-in {
-  from {
-    visibility: hidden;
-    opacity: 0;
-    bottom: 100%;
-  }
-  1% {
-    visibility: visible;
-    opacity: 0;
-    bottom: 99%;
-  }
-  25% {
-    opacity: 0.25;
-    bottom: 75%;
-  }
-  50% {
-    opacity: 0.5;
-    bottom: 50%;
-  }
-  75% {
-    opacity: 0.75;
-    bottom: 25%;
-  }
-  to {
-    opacity: 1;
-    bottom: 0%;
-    visibility: visible;
-  }
-}
-@keyframes fade-out {
-  from {
-    visibility: visible;
-    opacity: 1;
-    bottom: 0;
-  }
-  25% {
-    bottom: 25%;
-  }
-  50% {
-    bottom: 50%;
-  }
-  75% {
-    bottom: 75%;
-  }
-  99% {
-    bottom: 99%;
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    bottom: 100%;
-    visibility: hidden;
-  }
-}
 body {
   width: 100vw;
   overflow-x: hidden;
@@ -1076,4 +1076,4 @@ body {
 
 .links, .header__navigation-menu-mob li a {
   text-decoration: none;
-}/*# sourceMappingURL=global.css.map */
+}/*# sourceMappingURL=home.css.map */
