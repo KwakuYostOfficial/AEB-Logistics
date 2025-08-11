@@ -1,8 +1,6 @@
 @import '../../Global/variables';
 @import '../../Global/mixin';
 
-/* || Desing for mobile needs to be done */
-
 .header {
     @include shadowEffectsHeader ($shadowEffect);
 
@@ -35,11 +33,13 @@
     }
 
     &__head {
+        white-space: nowrap;
         font-size: map-get($font-size, medium);
         font-weight: map-get($font-weight, normal );
     }
 
     &__nav {
+        visibility: hidden;
         &-list {
             list-style-type: none;
 
@@ -54,4 +54,18 @@
         }
     }
  
+}
+
+
+
+/* || FOR MOBILE */
+
+@include breakpoint-down (medium) {
+    .header {
+        /* || DO SOMETING CONCERNING THE AEB LOGO FOR MOBILE */
+
+        &__head{
+            font-size: map-get($font-size, normal);
+        }
+    }
 }
