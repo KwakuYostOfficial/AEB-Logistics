@@ -28,3 +28,16 @@ $breakpoints-down : (
 @mixin shadowEffectsHeader ($effect) {
     box-shadow: 0 1px 5px $effect;
 };
+
+@mixin headerLogo {
+    width: 11rem;
+    height: 3rem;
+    
+    display: block;
+};
+
+@mixin headerLogoImg {
+    display: block;
+    width: 100%;
+    height: 100%;
+};

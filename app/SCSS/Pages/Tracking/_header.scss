@@ -10,6 +10,8 @@
     width: $width;
     height: $heigh;
 
+    padding: $padding;
+
     background-color: $themeColor;
 
     position: sticky;
@@ -25,14 +27,10 @@
     align-items: center;
 
     &__aeb_logo-link {
-        display: block;
-        height: 100%;
-
-        background-color: blue;
+        @include headerLogo;
 
         & img {
-            display: block;
-            height: 100%;
+            @include headerLogoImg;
         }
     }
 
