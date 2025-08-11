@@ -5,7 +5,6 @@
 .header {
     @include shadowEffectsHeader ($shadowEffect);
 
-    font-family: $font-family;
 
     width: $width;
     height: $heigh;
@@ -36,11 +35,25 @@
         }
     }
 
+    &__head {
+        font-size: map-get($font-size, medium);
+        font-weight: map-get($font-weight, normal );
+    }
+
     &__nav {
         &-list {
             list-style-type: none;
+
+
+            &Item{
+                & a {
+                    color: $themeTextColor;
+                    
+                    font-size: map-get($font-size, small);
+                    font-weight: map-get($font-weight, normal);
+                }
+            }
         }
     }
-
-    
+ 
 }

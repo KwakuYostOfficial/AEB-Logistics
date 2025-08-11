@@ -39,7 +39,6 @@
 
 .header {
   box-shadow: 0 1px 5px rgba(31, 40, 42, 0.705);
-  font-family: sans-serif;
   width: 100vw;
   height: 4rem;
   background-color: hsl(0, 0%, 100%);
@@ -62,11 +61,24 @@
   display: block;
   height: 100%;
 }
+.header__head {
+  font-weight: 400;
+}
 .header__nav-list {
   list-style-type: none;
+}
+.header__nav-listItem a {
+  color: rgb(31, 40, 42);
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 body {
   width: 100vw;
   height: 100vh;
+  font-family: sans-serif;
+}
+
+.links {
+  text-decoration: none;
 }/*# sourceMappingURL=tracking.css.map */

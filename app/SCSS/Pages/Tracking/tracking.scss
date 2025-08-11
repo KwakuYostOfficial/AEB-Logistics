@@ -6,4 +6,10 @@
 body{
     width: $width;
     height: 100vh;
+
+    font-family: $font-family;
+}
+
+.links {
+    text-decoration: none;
 }

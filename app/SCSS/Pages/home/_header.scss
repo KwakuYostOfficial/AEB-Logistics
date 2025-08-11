@@ -45,7 +45,7 @@
         &-links{
             font-size: map-get($font-size, small );
             font-weight: map-get($font-weight, normal );
-            color: $DarkBlue;
+            color: $themeTextColor;
         }
 
         & ul {
