@@ -39,15 +39,50 @@
     }
 
     &__nav {
+        visibility: hidden; // Remove the visibility asap
+
+        position: fixed;
+        top: calc($heigh + 1rem);
+        left: 1.25rem;
+        right: 1.25rem;
+
+        background-color: wheat;
+
+        border: none;
+        border-radius: $border;
+
         &-list {
             list-style-type: none;
 
+            display: grid;
+            grid-template-rows: repeat(3, 2.7rem);
+
+
             &Item{
+                border-bottom: 1px solid $themeTextColor;
+
+                &:last-child {
+                    border-bottom-left-radius: $border;
+                    border-bottom-right-radius: $border;
+                }
                 & a {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    align-items: center;
+
                     color: $themeTextColor;
-                    
-                    font-size: map-get($font-size, small);
+                    width: 100%;
+                    height: 100%;
+
+                    font-size: map-get($font-size, x-normal);
                     font-weight: map-get($font-weight, normal);
+
+                    transition: transform 0.25s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.02);
+                    }
                 }
             }
         }

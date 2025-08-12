@@ -44,6 +44,8 @@ $padding: 0 1.25rem;
 
 $shadow : 1px 1px 5px $shadowEffect;
 
+$border: 0.3125rem;
+
 .hide-from-desktop {
     @include breakpoint-up (medium) {
         display: none;
