@@ -23,6 +23,7 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 
     &__aeb_logo-link {
         @include headerLogo;
@@ -33,9 +34,14 @@
     }
 
     &__head {
+        flex: 1fr;
+
+        width: 100%;
+
         white-space: nowrap;
         font-size: map-get($font-size, medium);
         font-weight: map-get($font-weight, normal );
+        text-align: center;
     }
 
     &__nav {
@@ -85,6 +91,47 @@
                     }
                 }
             }
+        }
+    }
+
+
+    &__humberger-menu {
+        background-color: wheat;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        min-width: 2.5rem;
+        max-width: 2.5rem;
+        height: 2.5rem;
+
+        & .menu-bar {
+            background-color: $Dark-Blue;
+
+            width: 2.1875rem;
+            height: 0.25rem;
+
+            border-radius: 7px;
+
+            &::before, &::after {
+                display: block;
+                content: '';
+                background-color: $Dark-Blue;
+                width: 2.1875rem;
+                height: 0.25rem;
+
+                border-radius: inherit;
+            }
+
+            &::before {
+                transform: translateY(10px);
+            }
+
+            &::after {
+                transform: translateY(-14px);
+            }
+
         }
     }
  

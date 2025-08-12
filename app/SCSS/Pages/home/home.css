@@ -162,7 +162,8 @@
   padding: 0 1.25rem;
 }
 .header__logo {
-  width: 11rem;
+  min-width: 11rem;
+  max-width: 11rem;
   height: 3rem;
   display: block;
 }

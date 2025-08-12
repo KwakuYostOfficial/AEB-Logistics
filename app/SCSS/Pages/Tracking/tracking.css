@@ -52,9 +52,11 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
 }
 .header__aeb_logo-link {
-  width: 11rem;
+  min-width: 11rem;
+  max-width: 11rem;
   height: 3rem;
   display: block;
 }
@@ -64,8 +66,11 @@
   height: 100%;
 }
 .header__head {
+  flex: 1fr;
+  width: 100%;
   white-space: nowrap;
   font-weight: 400;
+  text-align: center;
 }
 .header__nav {
   visibility: hidden;
@@ -103,6 +108,35 @@
 }
 .header__nav-listItem a:hover {
   transform: scale(1.02);
+}
+.header__humberger-menu {
+  background-color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 2.5rem;
+  max-width: 2.5rem;
+  height: 2.5rem;
+}
+.header__humberger-menu .menu-bar {
+  background-color: hsl(233, 26%, 24%);
+  width: 2.1875rem;
+  height: 0.25rem;
+  border-radius: 7px;
+}
+.header__humberger-menu .menu-bar::before, .header__humberger-menu .menu-bar::after {
+  display: block;
+  content: "";
+  background-color: hsl(233, 26%, 24%);
+  width: 2.1875rem;
+  height: 0.25rem;
+  border-radius: inherit;
+}
+.header__humberger-menu .menu-bar::before {
+  transform: translateY(10px);
+}
+.header__humberger-menu .menu-bar::after {
+  transform: translateY(-14px);
 }
 
 /* || FOR MOBILE */
