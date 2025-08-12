@@ -1,4 +1,4 @@
-/* || THIS IS FOR THE BUTTONS NAVIGATION BUTTON AND ETC */
+/* || THIS IS FOR THE HOME PAGE*/
 
 const menu =  document.querySelector('.header__menu');
 const mobMenu = document.querySelector('.header__navigation-menu-mob');
@@ -16,6 +16,4 @@ menu.addEventListener('click', () => {
     }
 });
 
-
-/* HEADER SECTION */
-const header = document.querySelector('.header-js');
+/* || THIS IS FOR THE TRACKING PAGE */

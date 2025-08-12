@@ -133,10 +133,10 @@
   border-radius: inherit;
 }
 .header__humberger-menu .menu-bar::before {
-  transform: translateY(10px);
+  transform: translateY(0.625rem);
 }
 .header__humberger-menu .menu-bar::after {
-  transform: translateY(-14px);
+  transform: translateY(-0.875rem);
 }
 
 /* || FOR MOBILE */

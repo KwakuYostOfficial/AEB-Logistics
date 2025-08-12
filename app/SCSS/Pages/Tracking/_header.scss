@@ -125,11 +125,11 @@
             }
 
             &::before {
-                transform: translateY(10px);
+                transform: translateY(0.625rem);
             }
 
             &::after {
-                transform: translateY(-14px);
+                transform: translateY(-0.875rem);
             }
 
         }
