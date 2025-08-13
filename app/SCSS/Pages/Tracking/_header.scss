@@ -96,8 +96,6 @@
 
 
     &__humberger-menu {
-        background-color: wheat;
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -105,33 +103,56 @@
         min-width: 2.5rem;
         max-width: 2.5rem;
         height: 2.5rem;
-
+        
         & .menu-bar {
-            background-color: $Dark-Blue;
+            display: block;
 
-            width: 2.1875rem;
-            height: 0.25rem;
+            min-width: 2.1875rem;
+            max-width: 2.1875rem;
+            height: 2.1875rem;
 
-            border-radius: 7px;
-
-            &::before, &::after {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            
+            &::before,
+            &::after,
+            & span {
                 display: block;
                 content: '';
-                background-color: $Dark-Blue;
                 width: 2.1875rem;
                 height: 0.25rem;
 
-                border-radius: inherit;
+                border-radius: 0.4375rem;
+
+                background-color: $themeTextColor;
+
+                transition: transform .25s ease-in-out;
             }
 
             &::before {
-                transform: translateY(0.625rem);
+                transform: translateY(-6px);
             }
 
             &::after {
-                transform: translateY(-0.875rem);
+                transform: translateY(6px);
+            }
+        }
+
+        .clicked {
+
+            & span {
+                transform: scale(0);
             }
 
+            &::before {
+                transform: translateY(4px) rotateZ(135deg);
+            }
+
+            &::after {
+                transform: translateY(-4px) rotateZ(-135deg);
+            }
         }
     }
  
