@@ -72,8 +72,19 @@
   font-weight: 400;
   text-align: center;
 }
+.header .overlay {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, rgb(31, 40, 42), hsl(0, 0%, 100%));
+  opacity: 0.75;
+  visibility: visiblue;
+}
 .header__nav {
   visibility: hidden;
+  z-index: 1;
   position: fixed;
   top: 5rem;
   left: 1.25rem;

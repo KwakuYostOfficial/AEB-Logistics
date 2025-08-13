@@ -44,9 +44,23 @@
         text-align: center;
     }
 
+    & .overlay {
+        position: fixed;
+        top: $heigh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background-image: linear-gradient(to bottom, $themeTextColor, $themeColor);
+
+        opacity: .75;
+        visibility: visiblue;
+
+    }
+
     &__nav {
         visibility: hidden; // Remove the visibility asap
-
+        z-index: 1;
         position: fixed;
         top: calc($heigh + 1rem);
         left: 1.25rem;
