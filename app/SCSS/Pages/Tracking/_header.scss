@@ -53,9 +53,8 @@
         bottom: 0;
         z-index: 1;
 
-        background-image: linear-gradient(to bottom, $themeTextColor, $themeColor);
-
-        opacity: .75;
+        background-image: linear-gradient(to bottom, $themeTextColor, transparent);
+        
         visibility: hidden;
 
         animation-duration: 0.25s;
