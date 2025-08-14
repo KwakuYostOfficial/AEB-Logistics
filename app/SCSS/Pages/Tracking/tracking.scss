@@ -3,8 +3,11 @@
 
 @import './header';
 @import './input';
+@import './F&Q';
+@import '../../Global/footer';
 
 body{
+    overflow-x: hidden;
     width: $width;
     height: 100vh;
 
