@@ -1,5 +1,6 @@
 @import '../../Global/variables';
 @import '../../Global/mixin';
+@import '../../Global/animations';
 
 .header {
     @include shadowEffectsHeader ($shadowEffect);
@@ -16,7 +17,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 2;
+    z-index: 3;
 
 
     display: flex;
@@ -50,26 +51,45 @@
         left: 0;
         right: 0;
         bottom: 0;
+        z-index: 1;
 
         background-image: linear-gradient(to bottom, $themeTextColor, $themeColor);
 
         opacity: .75;
-        visibility: visiblue;
+        visibility: hidden;
+
+        animation-duration: 0.25s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
 
     }
 
+    .overlay-animation-down {
+        animation-name: kurtten-down;
+    }
+
+    .overlay-animation-up {
+        animation-name: kurtten-up;
+    }
+
     &__nav {
-        visibility: hidden; // Remove the visibility asap
-        z-index: 1;
+        visibility: hidden;
+        z-index: 2;
         position: fixed;
         top: calc($heigh + 1rem);
         left: 1.25rem;
         right: 1.25rem;
 
+        height: fit-content;
+
         background-color: wheat;
 
         border: none;
         border-radius: $border;
+
+        animation-duration: 0.25s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
 
         &-list {
             list-style-type: none;
@@ -106,6 +126,14 @@
                 }
             }
         }
+    }
+
+    .nav-animation-down {
+        animation-name: menu-kurtten-down;
+    }
+
+    .nav-animation-up {
+        animation-name: menu-krutten-up;
     }
 
 
