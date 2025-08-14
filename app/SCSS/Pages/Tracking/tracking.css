@@ -257,7 +257,7 @@
   right: 1.25rem;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: wheat;
+  background-color: hsl(0, 0%, 100%);
   border: none;
   border-radius: 0.3125rem;
   animation-duration: 0.25s;
