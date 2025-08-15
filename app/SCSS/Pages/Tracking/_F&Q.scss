@@ -1,11 +1,106 @@
 @import '../../Global/variables';
+@import '../../Global/mixin';
 
 
 .main__frequent-questions{
     width: 100vw;
-    height: 400px;
+    height: fit-content;
 
-    padding-top:100px;
+    padding:0 2rem;
+    padding-top: 3.125rem;
+
+    margin-bottom: 5rem;
     
-    background-color: wheat;
+    background-color: $themeColor;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+
+    & h2 {
+        font-size: map-get($font-size, large);
+        font-family: $font-family;
+        font-weight: map-get($font-weight, normal);
+
+        position: relative;
+
+        width: fit-content;
+
+
+        &::after {
+            content: '';
+            display: block;
+
+            position: absolute;
+            background-color: $themeTextColor;
+            
+            width: 100%;
+            height: 0.3125rem;
+
+        }
+    }
+
+    & details {
+        & summary {
+            font: inherit;
+
+            cursor: pointer;
+            list-style-type: none;
+
+            background-color: $Light-Grayish-Blue;
+
+            padding: 0.625rem;
+
+            border-top: 2px solid $themeTextColor;
+            border-radius: 0.15rem;
+
+            position: relative;
+
+            box-shadow: $shadow;
+
+            &::after {
+                content: '▼';
+
+                position: absolute;
+                right: 1.25rem;
+            }
+        }
+
+        & p{
+            padding-left: 0.9375rem;
+
+            background-color: $Very-Light-Gray;
+
+            border: none;
+            border-bottom-left-radius: 0.4375rem;
+            border-bottom-right-radius: 0.4375rem;
+        }
+
+        &:open summary::after {
+            content: '▲';
+        }
+    }
+}
+
+
+
+/* || FOR MOBILE */
+@include breakpoint-down(medium) {
+.main__frequent-questions{
+    & h2 {
+        font-size: map-get($font-size, normal );
+        font-weight: map-get($font-weight, bold);
+    }
+}
+}
+
+
+/* || FOR TABLETES AND DESKTOP */
+@include breakpoint-up(medium) {
+.main__frequent-questions {
+    & details {
+        width: 53.25rem;
+    }
+}
+
 }

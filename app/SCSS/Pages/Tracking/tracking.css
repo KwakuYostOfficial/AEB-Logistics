@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -433,11 +434,72 @@
 
 .main__frequent-questions {
   width: 100vw;
-  height: 400px;
-  padding-top: 100px;
-  background-color: wheat;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 2rem;
+  padding-top: 3.125rem;
+  margin-bottom: 5rem;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+.main__frequent-questions h2 {
+  font-size: 2.5rem;
+  font-family: sans-serif;
+  font-weight: 400;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.main__frequent-questions h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgb(31, 40, 42);
+  width: 100%;
+  height: 0.3125rem;
+}
+.main__frequent-questions details summary {
+  font: inherit;
+  cursor: pointer;
+  list-style-type: none;
+  background-color: hsl(220, 16%, 96%);
+  padding: 0.625rem;
+  border-top: 2px solid rgb(31, 40, 42);
+  border-radius: 0.15rem;
+  position: relative;
+  box-shadow: 1px 1px 5px rgba(31, 40, 42, 0.705);
+}
+.main__frequent-questions details summary::after {
+  content: "▼";
+  position: absolute;
+  right: 1.25rem;
+}
+.main__frequent-questions details p {
+  padding-left: 0.9375rem;
+  background-color: hsl(0, 0%, 98%);
+  border: none;
+  border-bottom-left-radius: 0.4375rem;
+  border-bottom-right-radius: 0.4375rem;
+}
+.main__frequent-questions details:open summary::after {
+  content: "▲";
 }
 
+/* || FOR MOBILE */
+@media screen and (max-width: 47.9375em) {
+  .main__frequent-questions h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+}
+/* || FOR TABLETES AND DESKTOP */
+@media screen and (min-width: 48em) {
+  .main__frequent-questions details {
+    width: 53.25rem;
+  }
+}
 @media screen and (min-width: 48em) {
   .hide-from-desktop {
     display: none;
