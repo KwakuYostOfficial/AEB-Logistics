@@ -8,10 +8,9 @@
 
     padding:0 2rem;
     padding-top: 3.125rem;
-
-    margin-bottom: 5rem;
+    padding-bottom: 5rem;
     
-    background-color: $themeColor;
+    background-color: $Very-Light-Gray;
 
     display: flex;
     flex-flow: column nowrap;
@@ -69,7 +68,7 @@
         & p{
             padding-left: 0.9375rem;
 
-            background-color: $Very-Light-Gray;
+            background-color: $Light-Grayish-Blue;
 
             border: none;
             border-bottom-left-radius: 0.4375rem;

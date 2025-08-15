@@ -438,8 +438,8 @@
   height: fit-content;
   padding: 0 2rem;
   padding-top: 3.125rem;
-  margin-bottom: 5rem;
-  background-color: hsl(0, 0%, 100%);
+  padding-bottom: 5rem;
+  background-color: hsl(0, 0%, 98%);
   display: flex;
   flex-flow: column nowrap;
   gap: 20px;
@@ -478,7 +478,7 @@
 }
 .main__frequent-questions details p {
   padding-left: 0.9375rem;
-  background-color: hsl(0, 0%, 98%);
+  background-color: hsl(220, 16%, 96%);
   border: none;
   border-bottom-left-radius: 0.4375rem;
   border-bottom-right-radius: 0.4375rem;
@@ -498,6 +498,73 @@
 @media screen and (min-width: 48em) {
   .main__frequent-questions details {
     width: 53.25rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  .hide-from-desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 47.9375em) {
+  .hide-from-mobile {
+    display: none;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.main__index {
+  min-height: 300px;
+  max-height: auto;
+  width: 90%;
+  padding: 0.9375rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.625rem;
+  background-color: hsl(0, 0%, 100%);
+}
+.main__index-sections {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+  padding-bottom: 0.625rem;
+}
+.main__index-sections h4 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: rgb(31, 40, 42);
+  padding: 0.3125rem 0;
+}
+.main__index-sections a {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: hsl(233, 8%, 62%);
+  padding-left: 0.625rem;
+  transition: transform 0.25s ease-in-out;
+}
+.main__index-sections a:hover {
+  transform: scale(1.015);
+}
+.main__index-sections a:active {
+  color: rgb(166, 36, 12);
+}
+
+/* || FOR MOBILE */
+@media screen and (max-width: 47.9375em) {
+  .main__index {
+    width: 100%;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+  }
+}
+/* || FOR TABLETS */
+@media screen and (min-width: 48em) {
+  .main__index {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (min-width: 48em) {
@@ -618,6 +685,10 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: sans-serif;
+}
+body main {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .links {

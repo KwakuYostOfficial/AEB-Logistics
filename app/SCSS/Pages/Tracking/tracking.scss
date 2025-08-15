@@ -4,6 +4,7 @@
 @import './header';
 @import './input';
 @import './F&Q';
+@import '../../Global/index';
 @import '../../Global/footer';
 
 body{
@@ -12,6 +13,10 @@ body{
     height: 100vh;
 
     font-family: $font-family;
+
+    & main {
+        height: fit-content;
+    }
 }
 
 .links {
