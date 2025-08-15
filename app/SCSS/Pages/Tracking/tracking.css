@@ -200,7 +200,7 @@
   height: 4rem;
   padding: 0 1.25rem;
   background-color: hsl(0, 0%, 100%);
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
